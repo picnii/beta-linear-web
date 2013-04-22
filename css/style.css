@@ -1,0 +1,33 @@
+@font-face
+{
+	font-family: thaisanslite;
+	src: url('thaisanslite_r1.ttf'),
+    	 url('thaisanslite_r1.otf'); /* IE9 */
+}
+
+body
+{
+	padding-top:60px;
+	background-color:#1B325F;
+
+}
+
+section.round > .row
+{
+	padding: 5px;
+	border-radius: 5px;
+	background-color:white;
+	margin-left: -5px;
+}
+
+section.round > .row > [class*="span"]
+{
+	margin-left: 5px;
+}
+
+
+h1, h2, h3, h4, h5, h6
+{
+	font-family: thaisanslite;
+	color:white;
+}
