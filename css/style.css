@@ -8,8 +8,33 @@
 body
 {
 	padding-top:60px;
-	background-color:#1B325F;
+	background-color:#3D63B5;
 
+}
+
+.bg
+{
+	background-color:#3D63B5;
+}
+
+.bg li a
+{
+	color:white;
+}
+
+a.bg
+{
+	color:white;
+}
+
+a.bg:hover
+{
+	color:#999;
+}
+
+.bg li a:hover
+{
+	color:black;
 }
 
 section.round > .row
@@ -25,6 +50,21 @@ section.round > .row > [class*="span"]
 	margin-left: 5px;
 }
 
+.round.wrapper
+{
+	border-radius: 5px;
+
+}
+
+.tab-pane
+{
+	padding:10px;
+}
+
+.wrapper.white
+{
+	background-color: white;
+}
 
 h1, h2, h3, h4, h5, h6
 {

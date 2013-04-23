@@ -14,13 +14,21 @@
 		$(document).ready(function(){
 			$('a[href^="#"]').on('click',function (e) {
 			    e.preventDefault();
-			    var target = this.hash,
-			    $target = $(target);
-			    $('html, body').stop().animate({
-			        'scrollTop': $target.offset().top
-			    }, 900, 'swing', function () {
-			        window.location.hash = target;
-			    });
+			    var target = this.hash,$target = $(target);
+			    console.log(target)
+			    if(target == "#topbar")
+			   		$('html, body').stop().animate({
+				        'scrollTop': 0
+				    }, 900, 'swing', function () {
+				        window.location.hash = target;
+				    });
+			   	else if(target!="#myCarousel" && target != "#topbar")
+				    $('html, body').stop().animate({
+				        'scrollTop': $target.offset().top
+				    }, 900, 'swing', function () {
+				        window.location.hash = target;
+				    });
+				
 			});
 		});
 
@@ -37,7 +45,7 @@
 				  	<div class="container">
 
 				  	<img src="http://placehold.it/120x40"/ class="pull-left">
-				  	 <a class="brand" href="#">
+				  	 <a class="brand" href="#topbar">
 				  	 	 Beta Linear
 				  	 </a>
 				    <ul class="nav pull-right">
@@ -118,19 +126,124 @@ ROBOT , CONTROL PANEL หรือแม้แต่ตู้ SERVER ก็ส�
 					
 				</div>
 				<div class="span7">
-					<ul class="nav nav-tabs">
-					  <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
-					  <li><a href="#specification" data-toggle="tab">Specification</a></li>
-					  <li><a href="#drawing" data-toggle="tab">Drawing</a></li>
-					  <li><a href="#gallery" data-toggle="tab">Gallery</a></li>
-					  <li><a href="#download" data-toggle="tab">Download</a></li>
-					</ul>
-					<div class="tab-content">
-						<div class="tab-pane active" id="overview">...</div>
-					  <div class="tab-pane" id="specification">...</div>
-					  <div class="tab-pane" id="drawing">...</div>
-					  <div class="tab-pane" id="gallery">...</div>
-					  <div class="tab-pane" id="download">...</div>
+					<div class="round wrapper white">
+						<ul class="nav nav-tabs bg" >
+						  <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
+						  <li><a href="#specification" data-toggle="tab">Specification</a></li>
+						  <li><a href="#drawing" data-toggle="tab">Drawing</a></li>
+						  <li><a href="#gallery" data-toggle="tab">Gallery</a></li>
+						  <li><a href="#download" data-toggle="tab">Download</a></li>
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane active" id="overview">
+								<ul>
+									<li>ขจัดปัญหาเรื่องความร้อนสะสมภายในตู้คอนโทรล ช่วยให้อุปกรณ์ไฟฟ้าภายในตู้คอนโทรลมีอายุการใช้งานที่ยาวนานขึ้น</li>
+									<li>ช่วยรักษาอุณหภูมิภายในตู้คอนโทรลให้คงที่ เพื่อป้องกันปัญหาเรื่องความชื้นที่เป็นอันตรายต่ออุปกรณ์ไฟฟ้า</li>
+									<li>ป้องกันปัญหาเรื่องฝุ่นละออง และไอระเหยของสารเคมี ไม่ให้เข้าไปสร้างความเสียหายแก่อุปกรณ์ไฟฟ้าภายในตู้คอนโทรล</li>
+									<li>ตัวเครื่องปรับอากาศกินไฟน้อยกว่าการระบายความร้อนในรูปแบบอื่นๆ</li>
+									<li>มีสัญญาณเตือนที่ตัวเครื่อง เมื่อแผ่นกรองฝุ่นอุดตัน</li>
+									<li>สามารถเปิดใช้งานได้ตลออด 24 ชม. และสามารถใช้งานได้กับตู้คอนโทรลไฟฟ้าทุกประเภท</li>
+								</ul>
+
+							</div>
+						  	<div class="tab-pane" id="specification">
+						  		<table class="table ">
+  									<tr>	
+  										<td colspan="4">ข้อมูลด้านเทคนิค(อ้างอิงการทดสอบภายใต้สภาพอุณหภูมิรอบข้าง 35 ํC)</td>
+  									</tr>
+  									<tr>	
+  										<td>รุ่น</td>
+  										<td>L800-P28</td>
+  										<td></td>
+  										<td></td>
+  									</tr>
+  									<tr>
+  										<td>ขนาดกำลัง</td>
+  										<td>2700</td>
+  										<td></td>
+  										<td>บีทียู</td>
+  									</tr>
+  									<tr>
+  										<td>ลักษณะการติดตั้ง</td>
+  										<td>ด้านข้างตู้</td>
+  										<td></td>
+  										<td></td>
+  									</tr>
+  									<tr>
+  										<td>ระบบไฟ</td>
+  										<td>แรงดันไฟ</td>
+  										<td>220</td>
+  										<td>วัตต์</td>
+  									</tr>
+  									<tr>
+  										<td></td>
+  										<td>ความถี่</td>
+  										<td>50</td>
+  										<td>เฮิร์ติ์</td>
+  									</tr>
+  									<tr>
+  										<td></td>
+  										<td>กระแสไฟ</td>
+  										<td>2.65</td>
+  										<td>แอมป์</td>
+  									</tr>
+  									<tr>
+  										<td>คอมเพรสเซอร์</td>
+  										<td>ลูกสูบ (ชนิดแรงบิดสูง)</td>
+  										<td></td>
+  										<td></td>
+  									</tr>
+  									<tr>
+  										<td></td>
+  										<td>ระบบน้ำยา</td>
+  										<td>134เอ</td>
+  										<td></td>
+  									</tr>
+  									<tr>
+  										<td>ชุดความคุม</td>
+  										<td colspan="3">ตัด-ต่อการทำงานโดยเทอร์โมสตรัท <br/>(ค่าแตกต่างของอุณหภูมิที่ตัด-ต่อการทำงาน 1 องศาเซลเซียส)</td>
+  									</tr>
+  									<tr>
+  										<td></td>
+  										<td colspan="3">มีระบบแจ้งเตือนเมื่อแผ่นกรองฝุ่นอุดตัน</td>
+  									</tr>
+  									<tr>
+  										<td>การแสดงผล</td>
+  										<td colspan="3">จอแสดงอุณหภูมิแบบดิจิตอล 2 หลัก(แสดงผลเป็นองศาเซลเซียส)</td>
+  									</tr>
+  									<tr>
+  										<td></td>
+  										<td colspan="3">สัญญาณไฟ LED แจ้งสถานะการทำงานของตัวเครื่อง</td>
+  									</tr>
+  									<tr>
+  										<td></td>
+  										<td>โชว์สีเขียว</td>
+  										<td colspan="2">ตัวเครื่องทำงานปกติ</td>
+  									</tr>
+
+  									<tr>
+  										<td></td>
+  										<td>โชว์สีแดง</td>
+  										<td colspan="2">เมื่อแผ่นกรองฝุ่นอุดตัน</td>
+  									</tr>
+
+  									<tr>
+  										<td></td>
+  										<td>โชว์สีเหลือง</td>
+  										<td colspan="2">เมื่อคอมเพรสเซอร์ทำงาน</td>
+  									</tr>
+  									
+								</table>
+
+						  	</div>
+						  	<div class="tab-pane" id="drawing">
+						  		<a href="images/drawing.jpg" rel="lightbox"><img src="images/drawing.jpg" style="height:410px;width:auto;" /></a>
+						  		<p>คลิกที่รูปเพื่อดูรูปขนาดเต็ม / คลิกที่นี่เพื่อ</p>
+
+						  	</div>
+						  	<div class="tab-pane" id="gallery">...</div>
+						  	<div class="tab-pane" id="download">...</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -138,10 +251,13 @@ ROBOT , CONTROL PANEL หรือแม้แต่ตู้ SERVER ก็ส�
 
 		<section id="contact" class="content" >
 			<h2>CONTACT</h2>
+
 			<div class="row">
+
 				<div class="span6">
-					<a href="images/map.jpg" rel="lightbox"><img src="http://placehold.it/380x507"></a>
-					
+					<iframe width="460" height="460" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=27+%E0%B8%8B%E0%B8%AD%E0%B8%A2%E0%B8%A5%E0%B9%89%E0%B8%A7%E0%B8%99-%E0%B9%80%E0%B8%88%E0%B8%B7%E0%B8%AD+%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%AA%E0%B8%A3%E0%B8%93%E0%B9%8C+2+%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3+%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2&amp;aq=&amp;sll=13.666457,100.601978&amp;sspn=0.004498,0.004823&amp;ie=UTF8&amp;hq=&amp;hnear=Soi+Luan-Chuea+Anuson+2,+Bang+Na,+Bangkok+10260,+Thailand&amp;ll=13.668166,100.601697&amp;spn=0.004498,0.004823&amp;t=m&amp;z=14&amp;output=embed"></iframe><br />
+					<small><a href="images/map.jpg" class="bg" rel="lightbox">ดูแผนที่</a></small><br/>
+					<small><a href="images/map.jpg" class="bg" target="_blank">ดูแผนขนาดใหญ่ที่ใหญ่</a></small>
 				</div>
 				<div class="span6">
 					asdasd
